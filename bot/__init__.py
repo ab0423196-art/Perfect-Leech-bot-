@@ -508,10 +508,8 @@ BOT_THEME = environ.get('BOT_THEME', '')
 if len(BOT_THEME) == 0:
     BOT_THEME = 'minimal'
 
-IMAGES = environ.get('IMAGES', '')
 IMAGES = (IMAGES.replace("'", '').replace('"', '').replace(
-    '[', ').replace(']', '').replace(",", "")).split()
-if IMAGES:
+    '[', '').replace(']', '').replace(",", "")).split()
     STATUS_LIMIT = 2
 
 IMG_SEARCH = environ.get('IMG_SEARCH', '')
